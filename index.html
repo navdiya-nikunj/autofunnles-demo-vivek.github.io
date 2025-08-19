@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang=“en”>
+<head>
+    <meta charset=“UTF-8">
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0">
+    <title>Proposal: The Nubello Growth Engine</title>
+    <script src=“https://cdn.tailwindcss.com”></script>
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”>
+    <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin>
+    <link href=“https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap” rel=“stylesheet”>
+    <style>
+        body {
+            font-family: ‘Inter’, sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(120deg, #F0F9FF 0%, #E0F2FE 100%);
+        }
+        /* Flowchart Styles */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: ‘’;
+            position: absolute;
+            width: 3px;
+            background-color: #CBD5E1;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1.5px;
+        }
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-container.left {
+            left: 0;
+        }
+        .timeline-container.right {
+            left: 50%;
+        }
+        .timeline-container::after {
+            content: ‘’;
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12.5px;
+            background-color: white;
+            border: 4px solid #3B82F6;
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .right::after {
+            left: -12.5px;
+        }
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border: 1px solid #E2E8F0;
+            transition: transform 0.3s ease;
+        }
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+        /* Responsive timeline */
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .timeline-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-container.right {
+                left: 0%;
+            }
+            .timeline-container.left::after, .timeline-container.right::after {
+                left: 18px;
+            }
+        }
+        .portfolio-item a .overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .portfolio-item a:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class=“bg-slate-50 text-slate-800">
+    <div class=“gradient-bg”>
+        <div class=“container mx-auto max-w-5xl px-4 py-12 sm:py-16 text-center”>
+            <h1 class=“text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight”>The Nubello Growth Engine</h1>
+            <p class=“mt-4 text-lg text-slate-600">A Custom AI Automation Command Center to Future-Proof Your Business</p>
+            <div class=“mt-4 text-sm text-slate-500”>
+                <p><strong>Prepared for:</strong> The Leadership Team at Nubello</p>
+                <p><strong>Date:</strong> August 19, 2025</p>
+            </div>
+        </div>
+    </div>
+    <div class=“container mx-auto max-w-5xl px-4 py-12 sm:py-16">
+        <!-- Introduction -->
+        <div class=“bg-white p-8 rounded-xl shadow-md border border-slate-200 mb-16”>
+            <h2 class=“text-2xl font-bold text-slate-900 mb-4">The Strategy: From Renting Tools to Owning Your Growth</h2>
+            <p class=“text-slate-600 leading-relaxed”>
+                The decision to build a custom central dashboard is a powerful strategic move. It shifts your business from simply renting various software to **owning the entire system** that powers your lead generation and sales. This platform will become a permanent business asset, giving you unparalleled control, intelligence, and a significant competitive advantage. This proposal outlines the journey of building this AI Command Center, designed to be the single source of truth for your entire operation.
+            </p>
+        </div>
+        <!-- Visual Flow -->
+        <div class=“text-center mb-16">
+            <h2 class=“text-3xl font-bold text-slate-900”>A Lead’s Automated Journey</h2>
+            <p class=“mt-2 text-lg text-slate-600">From first click to confirmed visit, here is the seamless experience we will build.</p>
+        </div>
+        <div class=“timeline”>
+            <!-- Steps 1-6 -->
+            <div class=“timeline-container left”><div class=“timeline-content”><h3 class=“font-bold text-lg text-blue-600">1. Lead Capture</h3><p class=“text-slate-500 text-sm mt-1”>Leads from Facebook, Google, and your website are instantly captured and standardized.</p></div></div>
+            <div class=“timeline-container right”><div class=“timeline-content”><h3 class=“font-bold text-lg text-blue-600">2. Centralization</h3><p class=“text-slate-500 text-sm mt-1”>Data flows into YOUR Custom CRM Dashboard, becoming the single source of truth.</p></div></div>
+            <div class=“timeline-container left”><div class=“timeline-content”><h3 class=“font-bold text-lg text-blue-600">3. Instant AI Engagement</h3><p class=“text-slate-500 text-sm mt-1”>Within 60 seconds, an AI Calling Agent phones the lead to qualify and book an appointment.</p></div></div>
+            <div class=“timeline-container right”><div class=“timeline-content”><h3 class=“font-bold text-lg text-blue-600">4. Automated Booking</h3><p class=“text-slate-500 text-sm mt-1”>The AI updates the dashboard, syncs the calendar, and sends a WhatsApp confirmation.</p></div></div>
+            <div class=“timeline-container left”><div class=“timeline-content”><h3 class=“font-bold text-lg text-blue-600">5. Nurturing & Follow-up</h3><p class=“text-slate-500 text-sm mt-1”>Smart reminders eliminate no-shows. Automated campaigns re-engage lost leads.</p></div></div>
+            <div class=“timeline-container right”><div class=“timeline-content”><h3 class=“font-bold text-lg text-blue-600">6. Real-Time Analytics</h3><p class=“text-slate-500 text-sm mt-1”>Your dashboard shows real-time ROI, conversion funnels, and data-driven insights.</p></div></div>
+        </div>
+        <!-- Justification Section -->
+        <div class=“mt-24 bg-white p-8 rounded-xl shadow-md border border-slate-200">
+            <h2 class=“text-2xl font-bold text-slate-900 mb-4 text-center”>Why This Investment Makes Sense</h2>
+            <div class=“grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 text-slate-600">
+                <div><h3 class=“font-semibold text-lg mb-2”>:moneybag: Plugs Lead Leakage</h3><p>Every lead that isn’t contacted within 5 minutes is a potential lost sale. Our system engages leads in under 60 seconds, maximizing your conversion opportunities from the ad spend you’re already making.</p></div>
+                <div><h3 class=“font-semibold text-lg mb-2">:alarm_clock: Saves Hundreds of Man-Hours</h3><p>Automating initial calls, follow-ups, and reminders frees up your team to focus on high-value tasks like providing excellent in-person consultations and closing sales, not manual dialing.</p></div>
+                <div><h3 class=“font-semibold text-lg mb-2”>:chart_with_upwards_trend: Own Your Data, Own Your Future</h3><p>Instead of your valuable customer data sitting in multiple third-party apps, it will be centralized in an asset you own. This allows for deeper insights and complete control over your business intelligence.</p></div>
+                <div><h3 class=“font-semibold text-lg mb-2">:rocket: Creates a Scalable Foundation</h3><p>This platform is built to grow with you. Whether you have 100 leads a month or 10,000, the system can scale without a proportional increase in your team’s workload, making your growth more profitable.</p></div>
+            </div>
+        </div>
+        <!-- Past Work Section -->
+        <div class=“mt-24”>
+            <div class=“text-center mb-12">
+                <h2 class=“text-3xl font-bold text-slate-900”>Our Proven Expertise & Past Work</h2>
+                <p class=“mt-2 text-lg text-slate-600">This isn’t just theory. Here are real examples of the systems and creatives we produce.</p>
+            </div>
+            <div class=“bg-white p-8 rounded-xl shadow-md border border-slate-200 space-y-16”>
+                <!-- Video Showcase -->
+                <div>
+                    <h3 class=“text-xl font-bold text-slate-800 mb-4">See Our Automation Dashboard in Action</h3>
+                    <div class=“aspect-w-16 aspect-h-9 rounded-lg overflow-hidden border”>
+                        <iframe src=“https://drive.google.com/file/d/1SNQsdRHXwI-JVqUuYG90DF9w0By6XgSI/preview” width=“100%” height=“480" allow=“autoplay”></iframe>
+                    </div>
+                </div>
+                <!-- AI Voice Recordings -->
+                <div>
+                    <h3 class=“text-xl font-bold text-slate-800 mb-4">Hear Our Voice AI Close Deals</h3>
+                    <div class=“grid grid-cols-1 md:grid-cols-2 gap-6”>
+                        <div class=“bg-slate-50 p-4 rounded-lg border”><p class=“font-semibold text-slate-700”>Informative Sales Call 1</p><audio controls class=“w-full mt-2"><source src=“https://storage.vapi.ai/e6a688d3-a69a-4c7c-971c-d94ef8c1a4f5-1755270009785-8c137fd4-bc01-4ff2-aa17-959a2f36f7fd-stereo.wav” type=“audio/wav”></audio></div>
+                        <div class=“bg-slate-50 p-4 rounded-lg border”><p class=“font-semibold text-slate-700">Informative Sales Call 2</p><audio controls class=“w-full mt-2”><source src=“https://storage.vapi.ai/9672452b-a02b-4f28-91be-be2611442d72-1755097989141-06e5f5a4-e26c-47f4-afd1-e084ad6178fb-stereo.wav” type=“audio/wav”></audio></div>
+                        <div class=“bg-slate-50 p-4 rounded-lg border”><p class=“font-semibold text-slate-700”>Appointment Booking Call 1</p><audio controls class=“w-full mt-2"><source src=“https://storage.vapi.ai/857b4f0f-26d2-4ab5-b1d0-d478ac03a81a-1750655034120-682aa830-1136-48f7-993f-368ca60a965a-stereo.wav” type=“audio/wav”></audio></div>
+                        <div class=“bg-slate-50 p-4 rounded-lg border”><p class=“font-semibold text-slate-700">Appointment Booking Call 2</p><audio controls class=“w-full mt-2”><source src=“https://storage.vapi.ai/cb3c4689-dd6b-41bd-9bff-e4084484a68a-1750587591181-34794de9-b47d-42a7-87fc-7494070e4edf-stereo.wav” type=“audio/wav”></audio></div>
+                    </div>
+                </div>
+                <!-- Video Ad Creatives -->
+                <div>
+                    <h3 class=“text-xl font-bold text-slate-800 mb-4”>Video Ad Creatives We’ve Produced</h3>
+                    <div class=“grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class=“rounded-lg overflow-hidden border aspect-video”><iframe src=“https://drive.google.com/file/d/1ePFzS7MlRnuUZwvx2QvCAZ_W-AFBYMXQ/preview” class=“w-full h-full”></iframe></div>
+                        <div class=“rounded-lg overflow-hidden border aspect-video”><iframe src=“https://drive.google.com/file/d/1eotbS7I_YEPOSOs3wpwL4tGO_o8W06fo/preview” class=“w-full h-full”></iframe></div>
+                        <div class=“rounded-lg overflow-hidden border aspect-video”><iframe src=“https://drive.google.com/file/d/1tKw9NSWaTMTYfzret1lRg3GNXeXn196w/preview” class=“w-full h-full”></iframe></div>
+                        <div class=“rounded-lg overflow-hidden border aspect-video”><iframe src=“https://drive.google.com/file/d/1iBjRoBkGQcj-Wvffpp2xRqFzmQSOHxJe/preview” class=“w-full h-full”></iframe></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-video bg-black”><a href=“https://www.instagram.com/p/DNeAM9aqKmq/” target=“_blank”><img src=“https://placehold.co/640x360/111827/ffffff?text=View+on+Instagram” class=“w-full h-full object-cover”><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View Reel</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-video bg-black”><a href=“https://www.instagram.com/p/DNbXqxWSVuG/” target=“_blank”><img src=“https://placehold.co/640x360/111827/ffffff?text=View+on+Instagram” class=“w-full h-full object-cover”><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View Reel</p></div></a></div>
+                    </div>
+                </div>
+                <!-- Image Ad Creatives -->
+                <div>
+                    <h3 class=“text-xl font-bold text-slate-800 mb-4”>Image Ad Creatives We’ve Designed</h3>
+                    <div class=“grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-1 aspect-h-1”><a href=“https://drive.google.com/file/d/1VYOyeY_p3wKobHROS7giX8S2Kj0Bk54s/view” target=“_blank”><img src=“https://drive.google.com/thumbnail?id=1VYOyeY_p3wKobHROS7giX8S2Kj0Bk54s&sz=w1000” class=“w-full h-full object-cover bg-slate-100”><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-1 aspect-h-1"><a href=“https://drive.google.com/file/d/1VUW4e4qjSBsfGDTS7HgZbPSVEyqv1vxK/view” target=“_blank”><img src=“https://drive.google.com/thumbnail?id=1VUW4e4qjSBsfGDTS7HgZbPSVEyqv1vxK&sz=w1000” class=“w-full h-full object-cover bg-slate-100"><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-1 aspect-h-1”><a href=“https://drive.google.com/file/d/1aVH8Gr07leyCO1pY82j6L9U6b35vkxwI/view” target=“_blank”><img src=“https://drive.google.com/thumbnail?id=1aVH8Gr07leyCO1pY82j6L9U6b35vkxwI&sz=w1000” class=“w-full h-full object-cover bg-slate-100”><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-1 aspect-h-1"><a href=“https://drive.google.com/file/d/12UdeHitCqb95C_k7DZ4DgznWSeOKCAWD/view” target=“_blank”><img src=“https://drive.google.com/thumbnail?id=12UdeHitCqb95C_k7DZ4DgznWSeOKCAWD&sz=w1000” class=“w-full h-full object-cover bg-slate-100"><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-1 aspect-h-1”><a href=“https://drive.google.com/file/d/1CKMGf2PW6n1tX48gWz_1Y67zaFB_3IGH/view” target=“_blank”><img src=“https://drive.google.com/thumbnail?id=1CKMGf2PW6n1tX48gWz_1Y67zaFB_3IGH&sz=w1000” class=“w-full h-full object-cover bg-slate-100”><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-1 aspect-h-1"><a href=“https://drive.google.com/file/d/1caJ5ain-F4BlK-Pe7wblqHIi6XAnui3c/view” target=“_blank”><img src=“https://drive.google.com/thumbnail?id=1caJ5ain-F4BlK-Pe7wblqHIi6XAnui3c&sz=w1000” class=“w-full h-full object-cover bg-slate-100"><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-1 aspect-h-1”><a href=“https://drive.google.com/file/d/11GGDsOeTc2FYP0eDNxtdhkC8ZW_GPLNz/view” target=“_blank”><img src=“https://drive.google.com/thumbnail?id=11GGDsOeTc2FYP0eDNxtdhkC8ZW_GPLNz&sz=w1000” class=“w-full h-full object-cover bg-slate-100”><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-1 aspect-h-1"><a href=“https://drive.google.com/file/d/17Gh5Fc_Fwy-gmS4sGHK40r_4avquNwCt/view” target=“_blank”><img src=“https://drive.google.com/thumbnail?id=17Gh5Fc_Fwy-gmS4sGHK40r_4avquNwCt&sz=w1000” class=“w-full h-full object-cover bg-slate-100"><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-1 aspect-h-1”><a href=“https://drive.google.com/file/d/1d7uD1KxfLWx9T75LO5WG2MmlTbtwcuaJ/view” target=“_blank”><img src=“https://drive.google.com/thumbnail?id=1d7uD1KxfLWx9T75LO5WG2MmlTbtwcuaJ&sz=w1000” class=“w-full h-full object-cover bg-slate-100”><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-1 aspect-h-1"><a href=“https://drive.google.com/file/d/1wc9EjnM8e23SP34TVh81d0opear8EXm3/view” target=“_blank”><img src=“https://drive.google.com/thumbnail?id=1wc9EjnM8e23SP34TVh81d0opear8EXm3&sz=w1000” class=“w-full h-full object-cover bg-slate-100"><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-1 aspect-h-1”><a href=“https://drive.google.com/file/d/1zm8eLxxFjf23ER3Do8nUvYhjnBn2ayi8/view” target=“_blank”><img src=“https://drive.google.com/thumbnail?id=1zm8eLxxFjf23ER3Do8nUvYhjnBn2ayi8&sz=w1000” class=“w-full h-full object-cover bg-slate-100”><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View</p></div></a></div>
+                    </div>
+                </div>
+                <!-- Landing Page Showcase -->
+                <div>
+                    <h3 class=“text-xl font-bold text-slate-800 mb-4”>Websites & Landing Pages We’ve Built</h3>
+                    <div class=“grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-4 aspect-h-3”><a href=“https://landing.eazyviza.com.au” target=“_blank”><img src=“https://image.thum.io/get/width/600/crop/450/https://landing.eazyviza.com.au” alt=“EazyViza Landing Page” class=“w-full h-full object-cover” onerror=“this.onerror=null;this.src=‘https://placehold.co/600x450/e2e8f0/334155?text=EazyViza’;“><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View Live Page</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-4 aspect-h-3”><a href=“https://ecompreneurship.in” target=“_blank”><img src=“https://image.thum.io/get/width/600/crop/450/https://ecompreneurship.in” alt=“Ecompreneurship Landing Page” class=“w-full h-full object-cover” onerror=“this.onerror=null;this.src=‘https://placehold.co/600x450/e2e8f0/334155?text=Ecompreneurship’;“><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View Live Page</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-4 aspect-h-3”><a href=“https://filter.eazyviza.com” target=“_blank”><img src=“https://image.thum.io/get/width/600/crop/450/https://filter.eazyviza.com” alt=“EazyViza Filter Page” class=“w-full h-full object-cover” onerror=“this.onerror=null;this.src=‘https://placehold.co/600x450/e2e8f0/334155?text=EazyViza+Filter’;“><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View Live Page</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-4 aspect-h-3”><a href=“https://collinsquarters.com.au” target=“_blank”><img src=“https://image.thum.io/get/width/600/crop/450/https://collinsquarters.com.au” alt=“Collins Quarters” class=“w-full h-full object-cover” onerror=“this.onerror=null;this.src=‘https://placehold.co/600x450/e2e8f0/334155?text=Collins+Quarters’;“><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View Live Page</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-4 aspect-h-3”><a href=“https://wapto.app” target=“_blank”><img src=“https://image.thum.io/get/width/600/crop/450/https://wapto.app” alt=“Wapto” class=“w-full h-full object-cover” onerror=“this.onerror=null;this.src=‘https://placehold.co/600x450/e2e8f0/334155?text=Wapto’;“><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View Live Page</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-4 aspect-h-3”><a href=“https://advease.in” target=“_blank”><img src=“https://image.thum.io/get/width/600/crop/450/https://advease.in” alt=“Advease” class=“w-full h-full object-cover” onerror=“this.onerror=null;this.src=‘https://placehold.co/600x450/e2e8f0/334155?text=Advease’;“><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View Live Page</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-4 aspect-h-3”><a href=“https://quesene.com” target=“_blank”><img src=“https://image.thum.io/get/width/600/crop/450/https://quesene.com” alt=“Quesene” class=“w-full h-full object-cover” onerror=“this.onerror=null;this.src=‘https://placehold.co/600x450/e2e8f0/334155?text=Quesene’;“><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View Live Page</p></div></a></div>
+                        <div class=“portfolio-item group relative rounded-lg overflow-hidden border aspect-w-4 aspect-h-3”><a href=“https://rkpassociates.in” target=“_blank”><img src=“https://image.thum.io/get/width/600/crop/450/https://rkpassociates.in” alt=“RKP Associates” class=“w-full h-full object-cover” onerror=“this.onerror=null;this.src=‘https://placehold.co/600x450/e2e8f0/334155?text=RKP+Associates’;“><div class=“overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center”><p class=“text-white font-semibold”>View Live Page</p></div></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class=“bg-slate-800 text-slate-400 text-center py-6 mt-16”>
+        <p>&copy; 2025. This proposal is confidential and prepared exclusively for Nubello.</p>
+    </footer>
+</body>
+</html>
